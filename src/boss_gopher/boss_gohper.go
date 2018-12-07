@@ -17,7 +17,7 @@ func main() {
 			w.Write([]byte("Boss Gopher => " + workerResponse))
 			defer resp.Body.Close()
 		}
-
 	})
+
 	http.ListenAndServe(":8000", nil)
 }
