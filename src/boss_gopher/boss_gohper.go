@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		resp, err := http.Get("http://localhost:8001/")
 		if err != nil {
