@@ -10,8 +10,8 @@ func main() {
 		resp, _ := http.Get("http://localhost:8001/")
 		defer resp.Body.Close()
 		body, _ := ioutil.ReadAll(resp.Body)
-		worker_response := string(body)
-		w.Write([]byte("Boss Gopher => " + worker_response))
+		workerResponse := string(body)
+		w.Write([]byte("Boss Gopher => " + workerResponse))
 	})
 	http.ListenAndServe(":8000", nil)
 }
